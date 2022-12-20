@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+   body{
+    font-family: arial;
+   }
+   .main{
+   
+    margin: 2%;
+   }
+  
+   .container-back{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url(../../assets/images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 1px; 
+  
+  }
+   
+  .card-container{
+    width: 257.5px;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px; 
+    margin: 2%;
+    background-color: #fff;
+   }
+  
+  .card-container .image .crop{
+    height: 100px;
+    width: 257.5px;
+    overflow: hidden;
+  }
+  
+  .card-container .image .crop img {
+    height: auto;
+    width: 257.5px;
+   }
+  
+  .card-container .title{
+  
+  text-align: center;
+  padding: 20px;
+  
+  }
+  
+  .card-container h1{
+  font-size: 20px;
+  }
+  
+  .card-container .des{
+  padding: 3px;
+  text-align: center;
+  
+  padding-top: 10px;
+       border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  }
+  .card-container button{
+    width: 80px;
+    font-size: 20px;
+    margin-top: 40px;
+   margin-bottom: 10px;
+   background-color: white;
+   border: 1px solid #2c0b33;
+   border-radius: 5px;
+   padding:10px;
+  }
+  
+  
+  .card-container button:hover{
+  background-color: #2c0b33;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+  }

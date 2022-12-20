@@ -1,0 +1,41 @@
+<body>
+    <header>
+        <img src="assets/images/logo.png" class="logoimg" routerLink="/home">
+        <div class="container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a routerLink="/home" class="active">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/catalog" class="active">Catalog</a>
+                </li>
+                <li>
+                    <a routerLink="/about" class="active">About us</a>
+                </li>
+             <div class="logged" *ngIf="!isLoggedIn; else loggedInTemplate ">
+                <li>
+                    <a routerLink="auth/login">Login</a>
+                </li>
+                <li>
+                    <a routerLink="auth/register">Register</a>
+                </li>
+            </div>
+            <ng-template #loggedInTemplate>
+            <div class="logged">
+                <li>
+                    <a routerLink="auth/profile">{{user?.username}}'s Profile</a>
+                </li>
+                <li>
+                    <a routerLink="auth/logout">Logout</a>
+                </li>
+            </div>
+        </ng-template>
+            </ul>
+        </nav>
+    </header>
+</body>
