@@ -10,24 +10,23 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AboutComponent } from './core/about/about.component';
 import { AuthRoutingModule } from './auth/auth-routing.module';
-import { CatalogComponent } from './catalog/catalog.component';
-import { DetailsComponent } from './details/details.component';
-import { CreateComponent } from './create/create.component';
+import { CatalogComponent } from './trip/catalog/catalog.component';
+import { DetailsComponent } from './trip/details/details.component';
+import { CreateComponent } from './trip/create/create.component';
+import { TripModule } from './trip/trip.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    CatalogComponent,
-    DetailsComponent,
-    CreateComponent
   ],
   imports: [
     AuthRoutingModule,
     AuthModule,
     BrowserModule,
     AppRoutingModule,
+    TripModule,
     CoreModule,
     HttpClientModule,
     SharedModule

@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './core/about/about.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
-import { CatalogComponent } from './catalog/catalog.component';
-import { DetailsComponent } from './details/details.component';
-import { CreateComponent } from './create/create.component';
+import { CatalogComponent } from './trip/catalog/catalog.component';
+import { DetailsComponent } from './trip/details/details.component';
+import { CreateComponent } from './trip/create/create.component';
 
 const routes: Routes = [
   {

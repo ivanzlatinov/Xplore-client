@@ -4,7 +4,7 @@ import { LoginComponent } from "./login/login.component";
 import { LogoutComponent } from "./logout/logout.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegisterComponent } from "./register/register.component";
-import { CreateComponent } from "../create/create.component";
+import { CreateComponent } from "../trip/create/create.component";
 
 
 const routes: Routes = [

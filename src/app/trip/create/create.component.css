@@ -115,12 +115,7 @@
   display: block;
   cursor: pointer;
 }
-.wrapper .form .inputfield .check input[type="checkbox"]{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
+
 
 .wrapper .form .inputfield .check .checkmark:before{
   content: "";
@@ -136,11 +131,9 @@
 }
 
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
 
-.wrapper .form .inputfield .btn{
+
+.wrapper .form .inputfield button{
   width: 100%;
    padding: 8px 10px;
   font-size: 15px; 
@@ -152,7 +145,7 @@
   outline: none;
 }
 
-.wrapper .form .inputfield .btn:hover{
+.wrapper .form .inputfield button:hover{
   background: #2c0b33;
 }
 
@@ -171,4 +164,8 @@
   .wrapper .form .inputfield.terms{
     flex-direction: row;
   }
+}
+.error {
+  color: #ba3939;
+  margin: 3px;
 }
