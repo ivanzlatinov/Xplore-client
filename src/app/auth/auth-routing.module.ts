@@ -4,7 +4,7 @@ import { LoginComponent } from "./login/login.component";
 import { LogoutComponent } from "./logout/logout.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegisterComponent } from "./register/register.component";
-
+import { CreateComponent } from "../create/create.component";
 
 
 const routes: Routes = [
@@ -45,6 +45,15 @@ const routes: Routes = [
         loginRequired: true
        }
     },
+    {
+      path: 'create',
+      component: CreateComponent,
+      canActivate: [AuthActivate],
+      data: {
+        title: 'Create',
+        loginRequired: true
+      }
+    }
 ]
 
 export const AuthRoutingModule = RouterModule.forChild(routes)

@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
+import { CreateComponent } from './create/create.component';
 
 const routes: Routes = [
   {
@@ -13,33 +14,38 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HomeComponent,
     data: {
-      title: 'Xplore'
+      title: 'Xplore',
+      
     }
   },
   {
     path: 'home',
     component: HomeComponent,
     data: {
-      title: 'Xplore'
+      title: 'Xplore',
     }
   },
   {
   path: 'about',
   component: AboutComponent,
   data: {
-    title: 'About us'
+    title: 'About us',
    } 
   },
   {
     path: 'catalog',
     component: CatalogComponent,
     data: {
-      title: 'Catalog'
+      title: 'Catalog',
      }
   },
+  
   {
     path: 'details/:id',
-    component: DetailsComponent
+    component: DetailsComponent,
+    data: {
+      title: 'Details',
+    }
   },
   {
     path: 'not-found',

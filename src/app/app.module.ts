@@ -12,6 +12,7 @@ import { AboutComponent } from './core/about/about.component';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     AboutComponent,
     CatalogComponent,
-    DetailsComponent
+    DetailsComponent,
+    CreateComponent
   ],
   imports: [
     AuthRoutingModule,
