@@ -7,11 +7,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+   
   ],
   imports: [
     CommonModule,
