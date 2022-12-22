@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './trip/catalog/catalog.component';
 import { DetailsComponent } from './trip/details/details.component';
 import { CreateComponent } from './trip/create/create.component';
+import { AuthActivate } from './shared/guards/auth.activate';
 
 const routes: Routes = [
   {
@@ -38,6 +39,15 @@ const routes: Routes = [
     data: {
       title: 'Catalog',
      }
+  },
+  {
+    path: 'create',
+    component: CreateComponent,
+    canActivate: [AuthActivate],
+    data: {
+      title: 'Create',
+      loginRequired: true
+    }
   },
   
   {

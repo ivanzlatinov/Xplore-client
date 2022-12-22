@@ -4,22 +4,57 @@
   
      
       <div class="container">
+        <form [formGroup]="form" (ngSubmit)="saveProfile()">
           <div class="profile"><img src="../../../assets/images/user.png" alt="default user">
               <h3>User Info:</h3>
               <div class="flex">
                   <p>Username: </p>
-                  <p>Johny</p>
+                  <p>
+                    <ng-container *ngIf="showEditMode">
+                        <input type="text" formControlName="username">
+                        <ng-container *ngIf="form.get('username')?.touched || formSubmited">
+                          <p *ngIf="form.get('username')?.errors?.['required']" class="error">
+                            Username is required!
+                          </p>
+                          <p *ngIf="form.get('username')?.errors?.['minlength']" class="error">
+                            Username should be longer than 5 chars
+                          </p>
+                        </ng-container>
+                      </ng-container>
+                    <ng-container *ngIf="!showEditMode">
+                    {{user.username}}
+                </ng-container>
+            </p>
               </div>
               <div class="flex">
-                  <p>Email: </p>
-                  <p>john.doe@gmail.com</p>
+                <p>Email: </p>
+                <p>
+                  <ng-container *ngIf="showEditMode">
+                    <input type="text" formControlName="email">
+                    <ng-container *ngIf="form.get('email')?.touched || formSubmited">
+                      <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                        Email is required!
+                      </p>
+                      <p class="error" *ngIf="form.get('email')?.errors?.['pattern']">
+                        Email is not valid!
+                      </p>
+                    </ng-container>
+                  </ng-container>
+                  <ng-container *ngIf="!showEditMode">
+                    {{user.email}}
+                  </ng-container>
+                </p>
               </div>
               <div class="flex">
                   <p>Your bookings: </p>
                   <p>TO DO</p>
               </div>
-              <button class="edit-button">Edit</button>
+              <button class="edit-button" (click)="showEditMode ? undefined : toggleEditMode()" [type]="showEditMode ? 'submit': 'button'">
+              <ng-container *ngIf="showEditMode">Save</ng-container>
+              <ng-container *ngIf="!showEditMode">Edit</ng-container>
+            </button>
           </div>
+        </form>
       </div>
   
   </div>

@@ -9,9 +9,11 @@ import { matchPasswordValidator } from 'src/app/shared/validators';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+   
+  EMAIL_PATTERN = /^[a-z0-9A-Z\.-]{3,}@[a-z]+\.[a-z]+$/
 
   form = this.fb.group({
-   email: ['', [Validators.required, Validators.email]],
+   email: ['', [Validators.required, Validators.pattern(this.EMAIL_PATTERN)]],
    username: ['', [Validators.required, Validators.minLength(5)]],
    passwords: this.fb.group({
     password: ['', [Validators.required, Validators.minLength(5)]],
@@ -25,7 +27,7 @@ export class RegisterComponent {
   constructor(private fb: FormBuilder) { }
 
   registerHandler(){
-    console.log(this.form.value)
+    if(this.form.invalid){ return; }
   }
 
 }

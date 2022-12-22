@@ -10,10 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AboutComponent } from './core/about/about.component';
 import { AuthRoutingModule } from './auth/auth-routing.module';
-import { CatalogComponent } from './trip/catalog/catalog.component';
-import { DetailsComponent } from './trip/details/details.component';
-import { CreateComponent } from './trip/create/create.component';
 import { TripModule } from './trip/trip.module';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -31,7 +29,9 @@ import { TripModule } from './trip/trip.module';
     HttpClientModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
